@@ -9,4 +9,4 @@ I hope that I can learn so many things from this project.Thank you.... <br>
 I just completed the basic scructure of the webpages. <br>
 
 ## Whats next
-I need to add meaning full contents the pages. 
+I need to add meaning full contents to the pages. 
