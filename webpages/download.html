@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloader</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--fontawesome icons-->
+    <script src="https://kit.fontawesome.com/20d919147c.js" crossorigin="anonymous"></script>
+    <style>
+        /* Popup box BEGIN */
+        .hover_bkgr_fricc{
+            background:rgba(0,0,0,.4);
+            cursor:default;
+            display:block;
+            height:100%;
+            position:fixed;
+            text-align:center;
+            top:0;
+            width:100%;
+            z-index:10000;
+        }
+        .hover_bkgr_fricc .helper{
+            display:inline-block;
+            height:100%;
+            vertical-align:middle;
+        }
+        .hover_bkgr_fricc > div {
+            background-color: #fff;
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 551px;
+            min-height: 100px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+        .popupCloseButton {
+            background-color: #fff;
+            border: 3px solid #999;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            font-family: arial;
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 30px;
+            line-height: 25px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <div class="container-fluid bg-primary fixed-top justify-content-between p-2">
+        <div class="row">
+            <div class="col-6 text-center text-white">
+                <a href="/webpages/index.html" class="text-decoration-none text-white"><h1>LOGO</h1></a>
+            </div>
+            <div class="col text-end align-self-center btn-group-lg" id="nav-btn">
+                <button type="button"  class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="dropdown-menu text-center bg-primary" id="links">
+                    <div class="btn-group-vertical">
+                        <a href="/webpages/index.html" class="text-decoration-none btn bg-primary text-white"><h4>Home</h4></a>
+                        <a href="/webpages/aboutus.html" class="text-decoration-none btn bg-primary text-white-50"><h4>About</h4></a>
+                        <a href="/webpages/contactus.html" class="text-decoration-none btn bg-primary text-white-50"><h4>Contact Us</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--content-->
+    <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">&times;</div>
+            <div class="container">
+                <h1 class="pb-5">Log in</h1>
+                <form action="" method="post">
+                    <div class="mb-3 row">
+                        <label for="name" class="form-label col-3">User Name</label>
+                        <input type="text" class="form-control col" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3 pb-2 row">
+                        <label for="password" class="form-label col-3">password</label>
+                        <input type="password" class="form-control col" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-primary">Clear</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--footer-->
+    <footer class="container-fluid text-bg-dark text-white text-center mt-5 p-md-5 fixed-bottom">
+        <p>Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.popupCloseButton').addEventListener('click', function() {
+            window.location.href = '/webpages';
+        });
+    </script>
+</body>
+</html>
